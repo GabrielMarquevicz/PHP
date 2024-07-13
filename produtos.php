@@ -12,24 +12,13 @@
 </head>
 
 <body>
-  <header class="container">
-    <h1><img src="mirrorfashion/img/logo.png" alt="Mirror Fashion" /></h1>
-
-    <p class="sacola">Nenhum item na sacola de compras</p>
-    <nav class="menuOpcoes">
-      <ul>
-        <li><a href="">Sua Conta</a></li>
-        <li><a href="">Listas de Desejos</a></li>
-        <li><a href="">Cartão Fidelidade</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href=""></a>Ajuda</li>
-      </ul>
-    </nav>
-  </header>
+  <?php include("cabecalho.php"); ?>
   <div class="produto-back">
     <div class="container">
       <div class="produto">
-        <form>
+        <form action="checkout.php" method="POST">
+          <input type="hidden" name="nome" value="Fuzzy Cardigan">
+          <input type="hidden" name="preco" value="129,00">
           <fieldset class="cores">
             <legend>Escolha a cor</legend>
             <input type="radio" name="cor" id="verde" checked>
@@ -87,17 +76,9 @@
       </div>
     </div>
   </div>
-  <footer>
-    <div class="container">
-      <img src="mirrorfashion/img/logo-rodape.png" alt="logorodape" />
-      <ul class="social">
-        <li><a href="http://facebook.com/mirrorfashion">Facebook</a></li>
-        <li><a href="http://twitter.com/mirrorfashion">Twitter</a></li>
-        <li><a href="http://plus.google.com/mirrorfashion">Google+</a></li>
-      </ul>
-    </div>
-  </footer>
+ <?php include("rodape.php"); ?>
   <script type="text/javascript" src="produto.js"></script>
 </body>
 
 </html>
+      

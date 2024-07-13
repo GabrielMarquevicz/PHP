@@ -50,6 +50,19 @@
                 <div class="card mb-3">
                     <div class="card-header">
                         <h2>Sua compra</h2>
+                        <dl>
+                           <dt>Cor</dt>
+                           <dd><?= $_POST['cor']?></dd>
+                           
+                           <dt>Tamanho</dt>
+                           <dd><?= $_POST['tamanho'] ?></dd>
+
+                           <dt>Nome</dt>
+                           <dd><?= $_POST['nome']?></dd>
+
+                           <dt>Preco</dt>
+                           <dd><?= $_POST['preco']?></dd>
+                        </dl>
                     </div>
 
                     <div class="card-body">

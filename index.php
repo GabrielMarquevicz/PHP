@@ -16,7 +16,7 @@
 
     <p class="sacola">Nenhum item na sacola de compras</p>
     <nav class="menuOpcoes">
-      <ul>
+      <ul> 
         <li><a href="">Sua Conta</a></li>
         <li><a href="">Listas de Desejos</a></li>
         <li><a href="">Cartão Fidelidade</a></li>
@@ -119,7 +119,7 @@
       <h2>Mais Vendidos</h2>
       <ol></ol>
         <li>
-          <a href="produto.html">
+          <a href="produtos.php">
             <figure>
               <img src="mirrorfashion/img/produtos/miniatura4.png" alt="miniatura4" />
               <figcaption>Jaqueta bordo por RS 279,99</figcaption>
@@ -127,7 +127,7 @@
           </a>
         </li>
         <li>
-          <a href="produto.html">
+          <a href="produtos.php">
             <figure>
               <img src="mirrorfashion/img/produtos/miniatura9.png" alt="miniatura9" />
               <figcaption>
@@ -137,7 +137,7 @@
           </a>
         </li>
         <li>
-          <a href="produto.html">
+          <a href="produtos.php">
             <figure>
               <img src="mirrorfashion/img/produtos/miniatura8.png" alt="miniatura8" />
               <figcaption>Camisa verde por RS 79,99</figcaption>
@@ -145,7 +145,7 @@
           </a>
         </li>
         <li>
-          <a href="produto.html">
+          <a href="produtos.php">
             <figure>
               <img src="mirrorfashion/img/produtos/miniatura10.png" alt="miniatura10" />
               <figcaption>Camisa Rosa por RS 69,99</figcaption>
