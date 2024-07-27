@@ -12,10 +12,19 @@
 </head>
 
 <body>
+ <?php
+ $conexao = mysqli_connect("127.0.0.1", "root", "", "wd43");
+ $dados = mysqli_query($conexao, "SELECT * FROM produtos WHERE id = $_GET[id]");
+ $produto = mysqli_fetch_array($dados);
+ ?>
+ <img src="img/produtos/foto<?= $produto['id'] ?>-verde.png">
   <?php include("cabecalho.php"); ?>
   <div class="produto-back">
     <div class="container">
       <div class="produto">
+        <h1><?= $produto['nome'] ?></h1>
+        <p>por apenas <?= $produto['preco'] ?></p>
+        <p><?= $produto['descricao'] ?></p>
         <form action="checkout.php" method="POST">
           <input type="hidden" name="nome" value="Fuzzy Cardigan">
           <input type="hidden" name="preco" value="129,00">
