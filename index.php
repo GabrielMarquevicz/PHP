@@ -66,7 +66,7 @@
       <h2>Novidades</h2>
       <ol></ol>
       <li>
-        <a href="produto.html">
+        <a href="produtos.php?id=1">
           <figure>
             <img src="mirrorfashion/img/produtos/miniatura1.png" alt="miniatura1" />
             <figcaption>Fuzz Cardigan por RS 129,90</figcaption>
