@@ -85,6 +85,16 @@
       </div>
     </div>
   </div>
+  <div class="fb-like" data-href="http://www.mirrorfashion.net" 
+  data-send="false" data-layout="box_count" data-width="58" data-show-faces="false"></div>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if(d.getElementsById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "http://connect.facebook.net/pt_BR/all.js#xfbm=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
  <?php include("rodape.php"); ?>
   <script type="text/javascript" src="produto.js"></script>
 </body>

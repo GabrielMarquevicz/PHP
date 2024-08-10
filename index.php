@@ -64,55 +64,22 @@
   <div class="container paineis">
     <section class="painel novidades">
       <h2>Novidades</h2>
-      <ol></ol>
-      <li>
-        <a href="produtos.php?id=1">
-          <figure>
-            <img src="mirrorfashion/img/produtos/miniatura1.png" alt="miniatura1" />
-            <figcaption>Fuzz Cardigan por RS 129,90</figcaption>
-          </figure>
+      <ol>
+        <?php
+        $conexao = mysqli_connect("127.0.0.1", "root", "", "wd43");
+        $dados = mysqli_query($conexao, "SELECT * FROM produtos");
+        while($produto = mysqli_fetch_array($dados)):
+          ?>
+        <li>
+          <a href="produto.php?id=<?= $produto['id'] ?>">
+            <figure>
+              <img src="mirrorfashion/img/produtos/miniatura<?= $produto['id'] ?>.png" alt="<?= $produto['nome']?>"/>
+              <figcaption><?= $produto['nome'] ?> por <?= $produto['preco'] ?></figcaption>
+            </figure>
         </a>
-      </li>
-      <li>
-        <a href="produto.html">
-          <figure>
-            <img src="mirrorfashion/img/produtos/miniatura10.png" alt="miniatura10" />
-            <figcaption>Camisa Rosa por RS 69,99</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li>
-        <a href="produto.html">
-          <figure>
-            <img src="mirrorfashion/img/produtos/miniatura2.png" alt="miniatura2" />
-            <figcaption>Camisa roxa caveira por RS 49,99</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li>
-        <a href="produtos.html">
-          <figure>
-            <img src="mirrorfashion/img/produtos/miniatura3.png" alt="miniatura3" />
-            <figcaption>Camisa verde por RS 79,99</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li>
-        <a href="produto.html">
-          <figure>
-            <img src="mirrorfashion/img/produtos/miniatura4.png" alt="miniatura4" />
-            <figcaption>Jaqueta bordo por RS 279,99</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li>
-        <a href="produto.html">
-          <figure>
-            <img src="mirrorfashion/img/produtos/miniatura5.png" alt="miniatura5" />
-            <figcaption>Camisa regata academia azul por RS 79,99</figcaption>
-          </figure>
-        </a>
-      </li>
+        </li>
+        <?php endwhile; ?>
+        </ol>
       <button type="button" id="mostrarNovidades">Mostrar mais</button>
     </section>
     <section class="painel mais-vendidos">
