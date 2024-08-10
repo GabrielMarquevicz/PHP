@@ -84,43 +84,24 @@
     </section>
     <section class="painel mais-vendidos">
       <h2>Mais Vendidos</h2>
-      <ol></ol>
+      <ol>
+      <?php
+        $conexao = mysqli_connect("127.0.0.1", "root", "", "wd43");
+        $dados = mysqli_query($conexao, "SELECT * FROM produtos");
+        while($produto = mysqli_fetch_array($dados)):
+          ?>
         <li>
-          <a href="produtos.php">
+          <a href="produto.php?id=<?= $produto['id'] ?>">
             <figure>
-              <img src="mirrorfashion/img/produtos/miniatura4.png" alt="miniatura4" />
-              <figcaption>Jaqueta bordo por RS 279,99</figcaption>
+              <img src="mirrorfashion/img/produtos/miniatura<?= $produto['id'] ?>.png" alt="<?= $produto['nome']?>"/>
+              <figcaption><?= $produto['nome'] ?> por <?= $produto['preco'] ?></figcaption>
             </figure>
-          </a>
+        </a>
         </li>
-        <li>
-          <a href="produtos.php">
-            <figure>
-              <img src="mirrorfashion/img/produtos/miniatura9.png" alt="miniatura9" />
-              <figcaption>
-                Camisa xadrez rosa com azul por RS 169,99
-              </figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="produtos.php">
-            <figure>
-              <img src="mirrorfashion/img/produtos/miniatura8.png" alt="miniatura8" />
-              <figcaption>Camisa verde por RS 79,99</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="produtos.php">
-            <figure>
-              <img src="mirrorfashion/img/produtos/miniatura10.png" alt="miniatura10" />
-              <figcaption>Camisa Rosa por RS 69,99</figcaption>
-            </figure>
-          </a>
-        </li>
+        <?php endwhile; ?>
+      </ol>
         <button type="button" id="maisVendidos">Mostrar mais</button>   
-    </section>
+      </section>
   </div>
   <div id="main"></div>
   <div id="destaques"></div>
